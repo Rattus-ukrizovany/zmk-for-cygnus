@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/keymap_drawer.yml"
-      - ".github/config/cygnus.keymap"
+      - "config/cygnus.keymap"
       - "config/**"
 
 jobs:

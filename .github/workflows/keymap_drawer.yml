@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - ".github/workflows/keymap_drawer.yml"
+      - ".github/workflows/keymap_draser.yml"
       - "keymap_drawer.config.yaml"
-      - "config/**"
+      - "config/cygnus.keymap"
 
 jobs:
   draw:
@@ -16,7 +16,7 @@ jobs:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       amend_commit: false
       install_branch: "main"
-      keymap_patterns: "config/*.keymap"
+      keymap_patterns: "config/cygnus.keymap"
       json_path: "config"
       config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
       output_folder: "keymap-drawer"
